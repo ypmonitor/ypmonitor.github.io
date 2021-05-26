@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Hello">
+
+
+
+
+
+<title>关于坚持 | Hello&#39;s Blog</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Hello&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">文章</a>
+                
+                    <a class="menu-item" href="/category">分类</a>
+                
+                    <a class="menu-item" href="/tag">标签</a>
+                
+                    <a class="menu-item" href="/about">关于</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Hello&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; 菜单</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">文章</a>
+                
+                    <a class="menu-item" href="/category">分类</a>
+                
+                    <a class="menu-item" href="/tag">标签</a>
+                
+                    <a class="menu-item" href="/about">关于</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <!-- <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a> -->
+        <!-- <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a> -->
+        <a class="tocbot-toc-expand" onclick="expand_toc()">展开</a>
+        <a onclick="go_top()">顶端</a>
+        <a onclick="go_bottom()">底部</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "收起"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "展开"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">关于坚持</h1>
+            
+                <div class="post-meta">
+                    <!-- 
+
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E5%8A%B1%E5%BF%97/">励志</a>
+                            
+                        </span>
+                     -->
+                    
+
+                    
+                    
+                        <span class="post-category">
+                    分类:
+                            
+                                <a href="/categories/%E5%8A%B1%E5%BF%97/">&nbsp;&nbsp;励志</a>
+                            
+                        </span>
+                    
+                    &nbsp;&nbsp;
+                    
+                        <span class="post-category">
+                    标签:
+                        
+                            <!-- <a href="/tags/%E4%BA%BA%E7%94%9F/"># 人生</a> -->
+                            <a href="/tags/%E4%BA%BA%E7%94%9F/">&nbsp;&nbsp;人生</a>
+                        
+                            <!-- <a href="/tags/%E7%9B%AE%E6%A0%87/"># 目标</a> -->
+                            <a href="/tags/%E7%9B%AE%E6%A0%87/">&nbsp;&nbsp;目标</a>
+                        
+                            <!-- <a href="/tags/%E5%9D%9A%E6%8C%81/"># 坚持</a> -->
+                            <a href="/tags/%E5%9D%9A%E6%8C%81/">&nbsp;&nbsp;坚持</a>
+                        
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>遇到困难的时候，坚持不懈可以帮你继续前进、克服艰苦，甚至解决问题。成功的人之所以成功，是因为他们对每件事情都抱着坚持不懈的态度。每天朝着目标前进一步，成功的几率就会多一分。遇到失败或者挫折的时候，要无视那些贬低你的人，坚持自我，并继续前进。坚持不懈就是不管什么时候都不要停下前进的脚步。</p>
+<p>我发现自己很难去坚持一样东西，做事情是靠着自己三分钟热度。动机很强烈、兴趣很浓厚，但到每天的实际行动中很难长时间的坚持。所以如何才能让自己坚持做一件事呢？对此我收集了一些资料，展开了一系列的研究。</p>
+<h3 id="依靠习惯的力量"><a href="#依靠习惯的力量" class="headerlink" title="依靠习惯的力量"></a>依靠习惯的力量</h3><ul>
+<li><strong>72 小时。</strong>有拖延症的人，一般都不是不行动，而是无限的准备。下定决心做一件事情后，不要一直做准备工作，一定要在72小时内开始做这件事，很多准备工作都不是必须的，如果超过3天不行动，再行动的可能性为零。</li>
+<li><strong>7天。</strong>我就发现一个和长肌肉一样的规律，人在做出改变的时候，如果挺过7天的痛苦期，到第8天就已经适应了痛苦，如果每次坚持都不超过7天，每次重新开始都会有7天长肌肉的痛苦，和长时间不跑步再跑步会痛7天是一样的道理。</li>
+<li><strong>21天。</strong>21天法则，是通过21天的正确重复练习，养成一个好习惯的一种方法。据研究，大脑构筑一条新的神经通道需要21天时间。所以，人的行为暗示，经21天以上的重复，会形成习惯，而90天以上的重复，会形成稳定的习惯。</li>
+<li><strong>10000小时。</strong>要成为某个领域的专家，需要10000小时。</li>
+<li><strong>时间累加复利。</strong>每次要放弃的时候，停下来计算一下投入的时间，也许比那些励志故事中的煽动言语更能让你坚持不懈。</li>
+<li><strong>20英里法则。</strong>有的人有时候一天走40到50英里，但是他会在很长时间里停留，最后被那些每天坚持走20英里的人超越。做事不必贪功进利，<em>坚持每天走20英里的人</em>走得更远。</li>
+</ul>
+<p><strong>总结：在实际的行动中，就算你有宏伟的计划、强烈的动机、无限的兴趣，落实到每天的1小时到2小时的行动，最后都会回归平淡和厌倦，如果没有养成习惯，最终还是坚持不下来。</strong></p>
+<h3 id="坚持不懈的追求目标"><a href="#坚持不懈的追求目标" class="headerlink" title="坚持不懈的追求目标"></a>坚持不懈的追求目标</h3><ol>
+<li><strong>设立目标。</strong>想一想，你到底想要什么结果，内容越详细越好，选择目标时，想明白<strong>制定目标的原因</strong>。将目标分为几个部分，为此制定一个<strong>完成时间表</strong>。选择一个可实现的目标。</li>
+<li><strong>将大目标分为多个小目标。</strong> 将大目标分成许多的小目标可以不断给予你动力，让你一直朝着最终目标前进。</li>
+<li><strong>每天花一点时间完成目标。</strong>循序渐进，逐渐增加时间或强度。</li>
+<li><strong>在显眼的地方放个提醒。</strong></li>
+<li><strong>将目标和已有的习惯联系起来。</strong></li>
+<li><strong>让目标又有趣又好玩。</strong>你可以把完成目标的过程当做一个游戏。每过一段时间，或每到一个阶段，都可以给自己一些奖励，那么你的目标也会变得更加有趣。你甚至可以打赌，看看自己在一定的时间内可以完成多少的任务。</li>
+<li><strong>追求目标的同时，坚持自己的价值观。</strong>始终不要忘记坚持的真正含义。并且记得，己所不欲勿施于人。在追求成功的路上要坚守自己准则。</li>
+</ol>
+<h3 id="在艰苦和失败中坚持"><a href="#在艰苦和失败中坚持" class="headerlink" title="在艰苦和失败中坚持"></a>在艰苦和失败中坚持</h3><ol>
+<li><strong>听取他人的批评，但不要让他们过多地影响你。</strong>你的周围总是会有不支持你，或者不赞同你的目标的人，问题的关键在于不要让他们的话支配你。努力证明他们是错的，并以此作为你完成目标的动力。如果他们的话会给你太多的负面情绪，可以直接无视他们。</li>
+<li><strong>建立起自己的支持网。</strong>在当地找一个和你的问题有关的互助小组。把你的问题告诉信任的家人或者朋友，寻求他们的建议。向专业顾问寻求帮助，或者寻找一个愿意倾听的人。</li>
+<li><strong>接受失败。</strong>那些最成功的人往往都经历过失败，和那些害怕失败的人相比，他们的不同之处在于他们敢于直面失败，从失败中汲取经验教训，并以此激励下一次尝试。他们坚持不懈，因为他们知道，失败只是实现目标所经历的一个过程。</li>
+<li><strong>分析失败的根本原因。</strong>如果你在实现目标的过程中总是遇到障碍或者问题的话，不妨花点时间想一想为什么。用辩证的眼光权衡一下自己的天赋和努力，看它们和你的目标是否匹配，看自己是否需要更加努力，是否需要寻求帮助。</li>
+<li><strong>想想最终达成目标的情形，以此来激励自己。</strong>当完成目标变得艰难，并且你想放弃的时候，回想你所憧憬的一切，重拾自己的动力。想想成功的那一刻周围人的反应，还有大家祝贺你的场景。</li>
+<li><strong>不要逃避现实。</strong>如果你有挫败感或者压迫感，不妨看看电视，或者大吃一顿来暂时回避现实。花点时间有节制地放松或者善待自己，可以让你重振身心。如果你发现你把所有的空余时间都花在逃避现实上，那很有可能你会逐渐淡忘自己的目标。</li>
+<li><strong>目标难以实现的话，及时改变计划。</strong>这并不是放弃，也不是屈服，你只是在坚持有效地利用时间和自己的才能。在原有的基础上换一个更可能实现的目标。不行的话，换个方向重新开始。</li>
+</ol>
+<blockquote>
+<p>tip: 不要害怕向他人寻求帮助。他们可以帮你完成目标，或者给你一些有用的意见。</p>
+<p>warning: 坚持不懈本身并不是你的目标，如果你把它当做了目标，你可能会成为一个固执、没有远见的人。</p>
+</blockquote>
+<h3 id="资料参考"><a href="#资料参考" class="headerlink" title="资料参考"></a>资料参考</h3><p>[1]:&nbsp; &nbsp; <a target="_blank" rel="noopener" href="https://www.zhihu.com/question/21470362">怎样使自己坚持努力？– 知乎</a><br>[2]:&nbsp; &nbsp; <a target="_blank" rel="noopener" href="https://zh.wikihow.com/%E5%9D%9A%E6%8C%81%E4%B8%8D%E6%87%88">如何坚持不懈 – Wiki</a></p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <!-- <span>Author:</span> -->
+                        <span>作者:</span>
+                        <!-- <span>Hello</span> -->
+                        <a itemprop="author" rel="author" href="/">&nbsp;&nbsp;Hello</a>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>时间：</span>
+                        <span>2021 年 05 月 26 日&nbsp;&nbsp;11:35:24</span>
+                    </p>
+                
+                
+                
+                    <p class="copyright-item">
+                        <!-- <span>License:</span> -->
+                        <span>许可:</span>
+                        <span>&nbsp;&nbsp;Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+
+            </section>
+        
+        <br/>
+        <!-- <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span>标签:</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/%E4%BA%BA%E7%94%9F/"># 人生</a>
+                        <a href="/tags/%E4%BA%BA%E7%94%9F/"> 人生</a>
+                    
+                        <a href="/tags/%E7%9B%AE%E6%A0%87/"># 目标</a>
+                        <a href="/tags/%E7%9B%AE%E6%A0%87/"> 目标</a>
+                    
+                        <a href="/tags/%E5%9D%9A%E6%8C%81/"># 坚持</a>
+                        <a href="/tags/%E5%9D%9A%E6%8C%81/"> 坚持</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <a href="javascript:window.history.back();">返回</a>
+                <span>· </span>
+                <a href="/">home</a>
+                <a href="/">主页</a>
+            </div>
+        </section> -->
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/2021/05/23/It-s-Time-To-Change/">It's Time To Change</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span style="font-size: 10px;">© Hello | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+</html>
