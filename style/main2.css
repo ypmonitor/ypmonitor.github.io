@@ -1217,6 +1217,17 @@ html.dark .tk-footer a,
 html.dark .tk-actions a {
   color: #409eff;
 }
-pre[class*=language-] code:after {
-  color: #8292a2;
+pre[class*=language-] {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+pre[class*=language-] code {
+  color: #476582;
+}
+pre[class*=language-].line-numbers {
+  background: #fafafa;
+}
+:not(pre) > code[class*=language-],
+pre[class*=language-] {
+  background: none;
 }

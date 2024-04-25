@@ -27,7 +27,8 @@ document.querySelector('.menu-switch').addEventListener('click', function() {
 function addCopyIcons() {
   const copyIcon = document.createElement('i');
   copyIcon.className = 'fa-solid icon icon-copy copy-code';
-  copyIcon.title = '复制代码';
+  // copyIcon.title = '复制代码';
+  copyIcon.title = 'Copy Code';
 
   document.querySelectorAll('.post-detail figure').forEach(figure => {
     figure.appendChild(copyIcon.cloneNode(true));
@@ -51,7 +52,7 @@ function addCopyIcons() {
       document.execCommand('copy');
       selection.removeAllRanges();
 
-      this.innerHTML = '<span class="copy-success"> 复制成功</span>';
+      this.innerHTML = '<span class="copy-success" style="font-size: 16px">Copy Success</span>';
       const that = this;
       setTimeout(() => {
         that.innerHTML = '';
