@@ -1,6 +1,7 @@
 /* global window, document */
 'use strict';
 
+
 // 菜单
 document.querySelector('.menu-switch').addEventListener('click', function() {
   const menuContainer = document.querySelector('.menu-container');
@@ -25,20 +26,21 @@ document.querySelector('.menu-switch').addEventListener('click', function() {
 
 // 代码复制
 function addCopyIcons() {
-  const copyIcon = document.createElement('i');
-  copyIcon.className = 'fa-solid icon icon-copy copy-code';
-  // copyIcon.title = '复制代码';
-  copyIcon.title = 'Copy Code';
+  const copyButton = document.createElement('button');
+  // copyIcon.className = 'fa-solid icon icon-copy copy-code';
+  copyButton.className = 'copy-button';
+  copyButton.innerHTML= '<span class="copy_span">Copy</span>'
+  // copyIcon.title = 'copy code';
 
-  document.querySelectorAll('.post-detail figure').forEach(figure => {
-    figure.appendChild(copyIcon.cloneNode(true));
+  document.querySelectorAll('.post-detail pre').forEach(figure => {
+    figure.appendChild(copyButton.cloneNode(true));
   });
 
   document.querySelectorAll('.post-detail pre[class*=language-].line-numbers').forEach(codeBlock => {
-    codeBlock.appendChild(copyIcon.cloneNode(true));
+    codeBlock.appendChild(copyButton.cloneNode(true));
   });
 
-  document.querySelectorAll('.post-detail .copy-code').forEach(copyCodeBtn => {
+  document.querySelectorAll('.copy-button').forEach(copyCodeBtn => {
     copyCodeBtn.addEventListener('click', function() {
       const selection = window.getSelection();
       const range = document.createRange();
@@ -52,33 +54,33 @@ function addCopyIcons() {
       document.execCommand('copy');
       selection.removeAllRanges();
 
-      this.innerHTML = '<span class="copy-success" style="font-size: 16px">Copy Success</span>';
+      this.innerHTML = '<span class="copy-span">Copied!</span>';
       const that = this;
       setTimeout(() => {
-        that.innerHTML = '';
+        that.innerHTML = '<span class="copy-span">Copy</span>';
       }, 2500);
     });
   });
 }
 
 // 代码语言
-function setLanguageAttributes() {
-  const setLanguageAttribute = (element, attributeName) => {
-    const codeLanguage = element.getAttribute('class');
-    if (codeLanguage) {
-      const langName = codeLanguage.replace(attributeName, '').trim().replace('language-', '').trim();
-      element.setAttribute('data-content-after', langName || 'CODE');
-    }
-  };
-
-  document.querySelectorAll('code').forEach(codeBlock => {
-    setLanguageAttribute(codeBlock, 'line-numbers');
-  });
-
-  document.querySelectorAll('.highlight').forEach(highlightBlock => {
-    setLanguageAttribute(highlightBlock, 'highlight');
-  });
-}
+// function setLanguageAttributes() {
+//   const setLanguageAttribute = (element, attributeName) => {
+//     const codeLanguage = element.getAttribute('class');
+//     if (codeLanguage) {
+//       const langName = codeLanguage.replace(attributeName, '').trim().replace('language-', '').trim();
+//       element.setAttribute('data-content-after', langName || 'CODE');
+//     }
+//   };
+//
+//   document.querySelectorAll('code').forEach(codeBlock => {
+//     setLanguageAttribute(codeBlock, 'line-numbers');
+//   });
+//
+//   document.querySelectorAll('.highlight').forEach(highlightBlock => {
+//     setLanguageAttribute(highlightBlock, 'highlight');
+//   });
+// }
 
 // 文章详情侧边目录
 function handleScroll() {
@@ -173,7 +175,7 @@ function lazyloadLoad() {
 function themeBoot() {
   if (window.is_post) {
     addCopyIcons();
-    setLanguageAttributes();
+    // setLanguageAttributes();
     bindScrollEvent();
     bindClickEvent();
   }
